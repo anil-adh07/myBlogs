@@ -1,0 +1,64 @@
+{% extends 'base.html'%}
+
+{% block title%} Welocome to myBlogs {%endblock%}
+
+{% block content%}
+
+<!-- Category Section -->
+
+<div class="custom-container">
+    <div class="row">
+        <div class="owl-carousel">
+            {% for i in category %}
+            <div class="card ">
+                <div class="image-container gap-img">
+                    <img class="responsive-img" src="/media/{{i.image}}" alt="IMAGE">
+                </div>
+                <br><br><br>
+                <div class="card-content">
+                    <!-- <div class="card-title" > -->
+                       <b>{{i.title}}</b> 
+                    <!-- </div> -->
+                        <p class="truncate">{{i.description}}</p>
+                        <div class="container center-align marall">
+                            <a href="/allcat/{{i.catId}}" class="btn bg-primary">VIEW</a>
+                        </div>
+                </div>
+                
+            </div>
+            
+            {%endfor%}
+          </div>
+    </div>
+</div>
+<!-- END CATEGORY -->
+
+
+<!-- POST SECTION -->
+<div class="custom-container nmar">
+    <div class="row">
+        <div class="col s12">
+            {%for i in posts%}
+            <div class="row">
+                <div class="col s12 m8">
+                    <h3>{{i.title|safe}}</h3>
+                    <b>(Published on: {{i.addedDate}})</b>
+                    {{i.content |truncatewords:70 | safe}}             
+                        <div class="marall">
+                            <a href="/fullpost/{{i.postId}}" class="btn bg-primary">Read More..</a>
+                        </div>
+                </div>
+                <div class="col s12 m4">
+                    <img class="responsive-img image-custom"  src="/media/{{i.image}}" alt="IMAGE">
+                </div>
+            </div>
+
+            {%endfor%}
+        </div>           
+    </div>
+</div>
+<!-- END POST SECTION -->
+
+
+{%endblock%}
+

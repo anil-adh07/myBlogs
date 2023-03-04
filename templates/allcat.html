@@ -1,0 +1,27 @@
+{% extends 'base.html'%}
+
+{% block title%} Category: {{cat.title}}{%endblock%}
+
+{% block content%}
+<div class="custom-container">
+    <br>
+<b style="font-size:25px;">Category: {{cat.title}}</b>
+<br><br>
+<div class="col s12 m4">
+    <img class="responsive-img" style="width: 100%; max-height: 300px; object-fit: cover;"  src="/media/{{cat.image}}" alt="IMAGE">
+</div>
+
+<h5>Posts' Under {{cat.title}} Category:</h5>
+<div class="collection">
+{%for i in post%}
+    <a class="collection-item" href="/fullpost/{{i.postId}}"><b style="font-size: 20px;">{{i.title}}</b></a>
+    {%empty%}
+    <b style="font-size: 20px;">No any post yet.</b>
+{%endfor%}
+</div>
+
+</div>
+
+<br><br>
+
+{%endblock%}

@@ -1,0 +1,66 @@
+
+
+<ul id="dropdown1" class="dropdown-content">
+  {% for i in category %}
+      <li><a href="/allcat/{{i.catId}}">{{i.title}}</a></li>
+      <li class="divider"></li>
+  {%endfor%}
+</ul>
+<ul id="dropdown2" class="dropdown-content">
+  {% for i in category %}
+      <li><a href="/allcat/{{i.catId}}">{{i.title}}</a></li>
+      <li class="divider"></li>
+  {%endfor%}
+</ul>
+
+
+<nav class="bg-primary">
+  <div class="container">
+  <div class="nav-wrapper">
+    {% load static%}
+   
+    <a href="/" class="brand-logo responsive-img"><img class="responsive-img" style=" width:50px; padding-top:10px; padding-bottom:10px;" src="{% static 'images/icon.png' %}"  alt="ICON"><span style="vertical-align: bottom;">   myBlogs</span></a>
+   
+    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    <ul class="right hide-on-med-and-down">
+      <li><a href="/home">HOME</a></li>
+      <li><a href="/about">ABOUT</a></li>
+      <li><a href="/admin" target="_blank">ADMIN</a></li>
+      <!-- Dropdown Trigger -->
+      <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">CATEGORY<i class="material-icons right">arrow_drop_down</i></a></li>
+    </ul>
+  </div>
+  </div>
+</nav>
+
+<ul class="sidenav" id="mobile-demo">
+  <li><a href="/home">HOME</a></li>
+  <li><a href="/about">ABOUT</a></li>
+  <li><a href="/admin" target="_blank">ADMIN</a></li>
+  <li><a class="dropdown-trigger" href="#!" data-target="dropdown2">CATEGORY<i class="material-icons right">arrow_drop_down</i></a></li>
+</ul>
+
+
+<!-- FROM HERE
+Dropdown Structure
+<ul id="dropdown1" class="dropdown-content">
+{% for i in category %}
+    <li><a href="/allcat/{{i.catId}}">{{i.title}}</a></li>
+    <li class="divider"></li>
+    {%endfor%}
+  </ul>
+  <nav class="bg-primary">
+    <div class="container">
+        <div class="nav-wrapper">
+          {% load static%}
+            <a href="/" class="brand-logo"><img style="width:50px; padding-top:10px; padding-bottom:10px;" src="{% static 'images/icon.png' %}"  alt="ICON"><span style="vertical-align: bottom;">   myBlogs</span></a>
+            <ul class="right hide-on-med-and-down">
+              <li><a href="/home">HOME</a></li>
+              <li><a href="/about">ABOUT</a></li>
+              <li><a href="/admin" target="_blank">ADMIN</a></li>
+              Dropdown Trigger
+              <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">CATEGORY<i class="material-icons right">arrow_drop_down</i></a></li>
+            </ul>
+          </div>
+    </div>
+  </nav> -->

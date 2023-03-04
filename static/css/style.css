@@ -1,0 +1,48 @@
+.bg-primary{
+    background: #0c4b33!important;
+}
+.marall{
+    margin-top: 20px;
+}
+
+.image-custom {
+    margin-top: 60px !important;
+}
+.custom-container{
+    width: 88% !important;
+    margin: auto;
+}
+
+.full-img{
+    max-width: 25%;
+    max-height: 30%;
+}
+.nmar{
+    margin-top: -100px;
+}
+.gap-img{
+    margin-left: 15px !important;
+}
+.image-container{
+height: 23%;
+width: 96%;
+margin-left: 2%;
+}
+.image-container2{
+    max-height: 13%;
+    width: 100%;
+    }
+.mybody {
+    display: flex!important;
+    min-height: 100vh!important;
+    flex-direction: column!important;
+    justify-content: center;
+    align-items: stretch;
+    align-content: stretch;
+    flex-wrap: wrap;
+  }
+
+/* main {
+    flex: 1 0 auto;
+  } */
+

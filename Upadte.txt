@@ -1,0 +1,5 @@
+-logo Responsive
+-image size same and responsive
+-full post--> side slider with page responisve
+-work on footer
+-deropdown  theme
